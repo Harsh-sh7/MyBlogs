@@ -33,3 +33,13 @@ To get started with MyBlogs, follow these steps to clone the repository and set 
 
    ```bash
    git clone https://github.com/Harsh-sh7/MyBlogs.git
+
+2. Go into the my-app folder:
+
+   ```bash
+   cd my-app
+
+3. Run the file:
+
+   ```bash
+   npm run dev
