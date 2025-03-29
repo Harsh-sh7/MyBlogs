@@ -42,4 +42,5 @@ To get started with MyBlogs, follow these steps to clone the repository and set 
 3. Run the file:
 
    ```bash
+   npm install
    npm run dev
