@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { allNews } from "../assets/mockData";
 import "./Home.css";
 
 export default function Home({ searchQuery }) {
@@ -18,8 +19,9 @@ export default function Home({ searchQuery }) {
         );
 
         if (!response.ok) {
-          throw new Error(`HTTP Error: ${response.status}`);
-        }
+          setArticles(allNews.articles);
+          // throw new Error(`HTTP Error: ${response.status}`);
+        }else{
 
         const data = await response.json();
         if (!data.articles || data.articles.length === 0) {
@@ -27,6 +29,7 @@ export default function Home({ searchQuery }) {
         }
 
         setArticles(data.articles);
+      }
       } catch (error) {
         console.error("Error fetching news articles:", error);
         setError(error.message);
@@ -66,7 +69,7 @@ export default function Home({ searchQuery }) {
       ) : (
         // News Grid Section
         <div className="news-grid">
-          {filteredArticles.map((article, index) => (
+          {filteredArticles?.map((article, index) => (
             <div key={index} className="news-card">
               {/* Article Image */}
               <img
