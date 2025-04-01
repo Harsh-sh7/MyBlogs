@@ -1,0 +1,224 @@
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.header p{
+  color: black;
+}
+
+/* News Grid */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+/* News Card */
+.news-card {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  padding: 18px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.news-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.news-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* News Content */
+.news-content h2 {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #fff;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #dcdcdc;
+}
+
+.news-description {
+  font-size: 16px;
+  color: #e3e3e3;
+  margin-bottom: 15px;
+}
+
+/* Read More Button */
+.read-more {
+  position:relative;
+  background: #ff9800;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.read-more:hover {
+  background: #e68900;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  color: black;
+  padding: 25px;
+  width: 90%;
+  max-width: 550px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.modal-date {
+  font-size: 14px;
+  color: gray;
+  margin: 10px 0;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.modal-read-full {
+  display: inline-block;
+  margin-top: 12px;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.modal-read-full:hover {
+  color: #0056b3;
+}
+
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-modal:hover {
+  color: red;
+}
+/* Like & Dislike Buttons */
+.news-card .likes-dislikes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.news-card .likes-dislikes button {
+  background: none;
+  border: none;
+  color: #ff9800;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.news-card .likes-dislikes button:hover {
+  color: #e68900;
+}
+
+/* Comment Section */
+.news-card .comment-section {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.news-card .comment-section h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.news-card .comment-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.news-card .comment-section button {
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.news-card .comment-section button:hover {
+  background: #0056b3;
+}
+
+.news-card .comment-list {
+  margin-top: 20px;
+}
+
+.news-card .comment-item {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.news-card .comment-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+.news-card .comment-item .comment-author {
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
